@@ -1,7 +1,12 @@
 def fib(num):
-    if num==0 or num==1:
+    if num<=1:
         return num
-    return int(fib(num-1))+int(fib(num-2))
+    a=0
+    b=1
+    for i in range(num):
+        a,b=b,a+b
+    return a 
+
 numInput=input()
 for i in range(int(numInput)):
     lineInput=input()
@@ -9,4 +14,3 @@ for i in range(int(numInput)):
     while int(lineInput)>int(fib(n)):
         n=n+1
     print(n,end=" ")
-
